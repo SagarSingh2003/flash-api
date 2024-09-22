@@ -4,6 +4,8 @@ import queryBuilder from "../utils/queryBuilder.js";
 import 'dotenv/config';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
+const genAI = new GoogleGenerativeAI(process.env.AI_API_KEY);
+
 const cardController = {
     getAllCards : async (req , res) => {
         try{
